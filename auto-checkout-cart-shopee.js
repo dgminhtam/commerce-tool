@@ -45,17 +45,15 @@
                 if (checked === 'false') {
                     checkbox.click();
                     console.log('Checkbox selected.');
+                } else {
+                    console.log('Checkbox is already selected.');
                 }
-                clickButtonHasText('mua hàng');
-                clickButtonHasText('đặt hàng');
-            } else if (checkbox) {
-                console.log('Checkbox is already selected.');
                 clickButtonHasText('mua hàng');
                 clickButtonHasText('đặt hàng');
             } else {
                 console.log('Checkbox not found.');
             }
-        };
+        };        
 
         const clickButtonHasText = (btnText) => {
             const observer = new MutationObserver(() => {
