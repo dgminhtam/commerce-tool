@@ -9,7 +9,6 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
     window.onload = function() {
         const productId = '25033918016';
         const validate = () => {
@@ -47,7 +46,8 @@
                     checkbox.click();
                     console.log('Checkbox selected.');
                 }
-                clickBuyButton();
+                clickButtonHasText('mua hàng');
+                clickButtonHasText('đặt hàng');
             } else if (checkbox) {
                 console.log('Checkbox is already selected.');
                 clickButtonHasText('mua hàng');
