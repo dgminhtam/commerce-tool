@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Auto checkout cart shopee
 // @namespace   Violentmonkey Scripts
-// @match       https://shopee.vn/cart/*
+// @match       https://shopee.vn/cart*
 // @grant       none
 // @version     1.0.0
 // @author      dgminhtam
@@ -10,7 +10,7 @@
 
 (function() {
     window.onload = function() {
-        const productId = '25033918016';
+        const productId = '25576510283';
         const validate = () => {
             const observer = new MutationObserver(() => {
                 const link = document.querySelector(`a[href*='${productId}']`);
@@ -53,7 +53,7 @@
             } else {
                 console.log('Checkbox not found.');
             }
-        };        
+        };
 
         const clickButtonHasText = (btnText) => {
             const observer = new MutationObserver(() => {
